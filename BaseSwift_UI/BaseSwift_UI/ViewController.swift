@@ -31,6 +31,8 @@ class ViewController: UIViewController ,UITextFieldDelegate,UITextViewDelegate{
     var stepper  : UIStepper!
     var scrollView : UIScrollView!
     var activityIndicatorView:UIActivityIndicatorView!
+    var progressView : UIProgressView!
+    
     
     
     var webVC = WebViewController()
@@ -88,7 +90,60 @@ class ViewController: UIViewController ,UITextFieldDelegate,UITextViewDelegate{
         //创建SegmentedControl
         createSegmentedControl()
         
+        //创建UIProgressView
+        createProgressView()
+        
+        //创建label
+        createLabelExplain()
     }
+    //MARK: ************创建label************
+    func createLabelExplain(){
+        let label = UILabel(frame:CGRect(x:10,y:page1ViewY,width:viewWidth-20,height:90))
+        
+        label.text = "左滑显示其他控件介绍，点击tableView显示Swift其他学习，若功能未实现，在之后会一步步实现。"
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.font = UIFont.boldSystemFont(ofSize: 17)
+        
+        label.layer.borderColor = UIColor.purple.cgColor
+        label.layer.borderWidth = 1
+        label.clipsToBounds = true
+        label.layer.cornerRadius = 5.0
+        
+        scrollView.addSubview(label)
+        
+    }
+    
+    //MARK: ************ 创建UIProgressView（进度条视图） ********************
+    func createProgressView() {
+        progressView = UIProgressView(progressViewStyle: .default)
+        progressView.frame = CGRect(x: 20, y: page1ViewY, width: viewWidth-40, height: 40)
+        
+        print("progressView的Frame为:\(progressView.frame)")//我们可以看出，progressView的height是系统给出的默认值，和UIStepper、UISwitch是一样的。
+        
+        //通过变形改变进度条高度（ 横向宽度不变，纵向高度变成默认的5倍）
+        progressView.transform = CGAffineTransform(scaleX: 1.0, y: 3.0)
+        
+        //默认进度
+        progressView.progress = 0.3 // 0.0 .. 1.0
+        
+        //设置进度条颜色
+        progressView.progressTintColor = UIColor.green //已有进度颜色
+        
+        progressView.trackTintColor = UIColor.purple  //剩余进度颜色（即进度槽颜色）
+        
+        progressView.layer.cornerRadius = 10
+        progressView.clipsToBounds = true
+        
+        progressView.layer.borderColor = UIColor.black.cgColor
+        
+        progressView.layer.borderWidth = 0.2
+        
+        scrollView.addSubview(progressView)
+        
+        page1ViewY += 50
+    }
+    
     @discardableResult
     //MARK: *********** 创建UISegmentedControl ***************
     func createSegmentedControl() -> UISegmentedControl {
@@ -124,9 +179,12 @@ class ViewController: UIViewController ,UITextFieldDelegate,UITextViewDelegate{
          //移除所有选项
          segmentedControl.removeAllSegments()
          */
-        
+
+        page1ViewY += 70
         
         return segmentedControl
+        
+        
         
     }
     //MARK: *********** segmentedControl 点击事件 ************
@@ -155,7 +213,9 @@ class ViewController: UIViewController ,UITextFieldDelegate,UITextViewDelegate{
         
         activityIndicatorView.frame = CGRect(x: self.view.center.x + viewWidth, y: self.view.center.y, width: 0, height: 0)
         
-        activityIndicatorView.color = UIColor.red
+        activityIndicatorView.color = UIColor.purple
+        
+        activityIndicatorView.backgroundColor = UIColor.gray
         
 
         scrollView.addSubview(activityIndicatorView)
@@ -219,10 +279,8 @@ class ViewController: UIViewController ,UITextFieldDelegate,UITextViewDelegate{
         
         let buttonTitle = ["click ->UIActionSheet","click -> UIImageView","click -> DatePicker and UIPickerView","click -> UIScrollView and UIPageControl","click -> UITableView","click -> UIActivityIndicatorView",]
         
-        
         for  i  in 0..<buttonTitle.count {
             
-
           let functionButton = UIButton(frame: CGRect(x: 20 + viewWidth, y: page2ViewY, width:viewWidth - 40, height: 50))
             
             functionButton.setTitle(buttonTitle[i], for: .normal)
@@ -349,7 +407,12 @@ class ViewController: UIViewController ,UITextFieldDelegate,UITextViewDelegate{
     //MARK:**************UIStepper点击事件*************
     func stepperClicked(_stepper:UIStepper) {
 
-       self.slider.value = Float(_stepper.value)
+        self.slider.value = Float(_stepper.value)
+        
+        let value:Double = _stepper.value * 0.01
+        
+        
+        self.progressView.setProgress(Float(value), animated: true)
     }
     
     
@@ -403,6 +466,8 @@ class ViewController: UIViewController ,UITextFieldDelegate,UITextViewDelegate{
         
         self.textView.bounces  = true
         
+        self.textView.text = "it`s UITextView"
+        
         self.textView.font = UIFont.systemFont(ofSize: 17)
         
         self.textView.layer.borderColor = UIColor.black.cgColor
@@ -412,7 +477,7 @@ class ViewController: UIViewController ,UITextFieldDelegate,UITextViewDelegate{
         self.textView.layer.cornerRadius = 5
         
         self.textView.tag = 200
-        self.textView.backgroundColor = UIColor.orange
+//        self.textView.backgroundColor = UIColor.orange
         
         scrollView.addSubview(self.textView)
     
@@ -633,7 +698,12 @@ class ViewController: UIViewController ,UITextFieldDelegate,UITextViewDelegate{
 //            creatAlertView(message: "Words can't more than 30")
 //        }
     }
-    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        
+        textView.text = ""
+        
+        return true
+    }
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
         //输入回车字符，注销响应者，隐藏键盘。但如果这样，点击键盘return，不能实现换行
