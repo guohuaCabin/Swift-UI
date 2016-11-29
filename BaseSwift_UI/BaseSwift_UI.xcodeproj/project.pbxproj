@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E3D944A1DED215800E0D9D3 /* Block_ByValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3D94491DED215800E0D9D3 /* Block_ByValueViewController.swift */; };
+		7E3D944C1DED217000E0D9D3 /* Delegate_ByValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3D944B1DED217000E0D9D3 /* Delegate_ByValueViewController.swift */; };
+		7E3D944E1DED21E700E0D9D3 /* ImageStretchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3D944D1DED21E700E0D9D3 /* ImageStretchViewController.swift */; };
+		7E3D94501DED264C00E0D9D3 /* ByValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3D944F1DED264C00E0D9D3 /* ByValueViewController.swift */; };
+		7E5CB4E01DE2DF1A00CA3353 /* PickerViewAndDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5CB4DA1DE2DF1A00CA3353 /* PickerViewAndDatePicker.swift */; };
+		7E5CB4E11DE2DF1A00CA3353 /* ScrollViewAndPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5CB4DB1DE2DF1A00CA3353 /* ScrollViewAndPageControl.swift */; };
+		7E5CB4E31DE2DF1A00CA3353 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5CB4DD1DE2DF1A00CA3353 /* ViewController.swift */; };
+		7E5CB4E41DE2DF1A00CA3353 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5CB4DE1DE2DF1A00CA3353 /* WebViewController.swift */; };
+		7E5CB4E61DE2DF3C00CA3353 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5CB4E51DE2DF3C00CA3353 /* ImageViewController.swift */; };
+		7E5CB4E81DE2DF8D00CA3353 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5CB4E71DE2DF8D00CA3353 /* TimerViewController.swift */; };
 		7EACD7DD1DDAE3AC003DADD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACD7DC1DDAE3AC003DADD1 /* AppDelegate.swift */; };
-		7EACD7DF1DDAE3AC003DADD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACD7DE1DDAE3AC003DADD1 /* ViewController.swift */; };
 		7EACD7E21DDAE3AC003DADD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EACD7E01DDAE3AC003DADD1 /* Main.storyboard */; };
 		7EACD7E41DDAE3AC003DADD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EACD7E31DDAE3AC003DADD1 /* Assets.xcassets */; };
 		7EACD7E71DDAE3AC003DADD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EACD7E51DDAE3AC003DADD1 /* LaunchScreen.storyboard */; };
 		7EACD7F21DDAE3AC003DADD1 /* BaseSwift_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACD7F11DDAE3AC003DADD1 /* BaseSwift_UITests.swift */; };
 		7EACD7FD1DDAE3AC003DADD1 /* BaseSwift_UIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACD7FC1DDAE3AC003DADD1 /* BaseSwift_UIUITests.swift */; };
-		7EACD80B1DDAE3D8003DADD1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACD80A1DDAE3D8003DADD1 /* MainViewController.swift */; };
-		7ED3C4D71DDD895E00D58055 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3C4D61DDD895E00D58055 /* ImageViewController.swift */; };
-		7ED3C4D91DDD898F00D58055 /* PickerViewAndDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3C4D81DDD898F00D58055 /* PickerViewAndDatePicker.swift */; };
-		7ED3C4DB1DDD89B800D58055 /* ScrollViewAndPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3C4DA1DDD89B800D58055 /* ScrollViewAndPageControl.swift */; };
-		7ED3C4DD1DDD89F100D58055 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3C4DC1DDD89F100D58055 /* TableViewController.swift */; };
-		7EE39DC31DDC35C8006CFAE8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE39DC21DDC35C8006CFAE8 /* WebViewController.swift */; };
+		7ECD92841DEC118800501147 /* ViewAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD92831DEC118800501147 /* ViewAnimationViewController.swift */; };
+		7ECD92861DEC214500501147 /* BlurEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD92851DEC214500501147 /* BlurEffectViewController.swift */; };
+		7ECD92881DEC216600501147 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD92871DEC216600501147 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +46,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E3D94491DED215800E0D9D3 /* Block_ByValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block_ByValueViewController.swift; sourceTree = "<group>"; };
+		7E3D944B1DED217000E0D9D3 /* Delegate_ByValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate_ByValueViewController.swift; sourceTree = "<group>"; };
+		7E3D944D1DED21E700E0D9D3 /* ImageStretchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStretchViewController.swift; sourceTree = "<group>"; };
+		7E3D944F1DED264C00E0D9D3 /* ByValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByValueViewController.swift; sourceTree = "<group>"; };
+		7E5CB4DA1DE2DF1A00CA3353 /* PickerViewAndDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewAndDatePicker.swift; sourceTree = "<group>"; };
+		7E5CB4DB1DE2DF1A00CA3353 /* ScrollViewAndPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewAndPageControl.swift; sourceTree = "<group>"; };
+		7E5CB4DD1DE2DF1A00CA3353 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E5CB4DE1DE2DF1A00CA3353 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		7E5CB4E51DE2DF3C00CA3353 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		7E5CB4E71DE2DF8D00CA3353 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		7EACD7D91DDAE3AC003DADD1 /* BaseSwift_UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseSwift_UI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EACD7DC1DDAE3AC003DADD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7EACD7DE1DDAE3AC003DADD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7EACD7E11DDAE3AC003DADD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EACD7E31DDAE3AC003DADD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EACD7E61DDAE3AC003DADD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,12 +68,9 @@
 		7EACD7F81DDAE3AC003DADD1 /* BaseSwift_UIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseSwift_UIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EACD7FC1DDAE3AC003DADD1 /* BaseSwift_UIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSwift_UIUITests.swift; sourceTree = "<group>"; };
 		7EACD7FE1DDAE3AC003DADD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EACD80A1DDAE3D8003DADD1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		7ED3C4D61DDD895E00D58055 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		7ED3C4D81DDD898F00D58055 /* PickerViewAndDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewAndDatePicker.swift; sourceTree = "<group>"; };
-		7ED3C4DA1DDD89B800D58055 /* ScrollViewAndPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewAndPageControl.swift; sourceTree = "<group>"; };
-		7ED3C4DC1DDD89F100D58055 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		7EE39DC21DDC35C8006CFAE8 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		7ECD92831DEC118800501147 /* ViewAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimationViewController.swift; sourceTree = "<group>"; };
+		7ECD92851DEC214500501147 /* BlurEffectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurEffectViewController.swift; sourceTree = "<group>"; };
+		7ECD92871DEC216600501147 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E5CB4D91DE2DF1A00CA3353 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				7E5CB4E51DE2DF3C00CA3353 /* ImageViewController.swift */,
+				7E5CB4DA1DE2DF1A00CA3353 /* PickerViewAndDatePicker.swift */,
+				7E5CB4DB1DE2DF1A00CA3353 /* ScrollViewAndPageControl.swift */,
+				7E5CB4DD1DE2DF1A00CA3353 /* ViewController.swift */,
+				7E5CB4DE1DE2DF1A00CA3353 /* WebViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		7E5CB4DF1DE2DF1A00CA3353 /* TableView->TrivialKnowledge */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD92871DEC216600501147 /* TableViewController.swift */,
+				7E5CB4E71DE2DF8D00CA3353 /* TimerViewController.swift */,
+				7ECD92831DEC118800501147 /* ViewAnimationViewController.swift */,
+				7ECD92851DEC214500501147 /* BlurEffectViewController.swift */,
+				7E3D94491DED215800E0D9D3 /* Block_ByValueViewController.swift */,
+				7E3D944B1DED217000E0D9D3 /* Delegate_ByValueViewController.swift */,
+				7E3D944D1DED21E700E0D9D3 /* ImageStretchViewController.swift */,
+				7E3D944F1DED264C00E0D9D3 /* ByValueViewController.swift */,
+			);
+			path = "TableView->TrivialKnowledge";
+			sourceTree = "<group>";
+		};
 		7EACD7D01DDAE3AC003DADD1 = {
 			isa = PBXGroup;
 			children = (
@@ -109,18 +148,13 @@
 		7EACD7DB1DDAE3AC003DADD1 /* BaseSwift_UI */ = {
 			isa = PBXGroup;
 			children = (
+				7E5CB4D91DE2DF1A00CA3353 /* Control */,
+				7E5CB4DF1DE2DF1A00CA3353 /* TableView->TrivialKnowledge */,
 				7EACD7DC1DDAE3AC003DADD1 /* AppDelegate.swift */,
-				7EACD7DE1DDAE3AC003DADD1 /* ViewController.swift */,
 				7EACD7E01DDAE3AC003DADD1 /* Main.storyboard */,
 				7EACD7E31DDAE3AC003DADD1 /* Assets.xcassets */,
 				7EACD7E51DDAE3AC003DADD1 /* LaunchScreen.storyboard */,
 				7EACD7E81DDAE3AC003DADD1 /* Info.plist */,
-				7EACD80A1DDAE3D8003DADD1 /* MainViewController.swift */,
-				7EE39DC21DDC35C8006CFAE8 /* WebViewController.swift */,
-				7ED3C4D61DDD895E00D58055 /* ImageViewController.swift */,
-				7ED3C4D81DDD898F00D58055 /* PickerViewAndDatePicker.swift */,
-				7ED3C4DA1DDD89B800D58055 /* ScrollViewAndPageControl.swift */,
-				7ED3C4DC1DDD89F100D58055 /* TableViewController.swift */,
 			);
 			path = BaseSwift_UI;
 			sourceTree = "<group>";
@@ -280,14 +314,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EACD80B1DDAE3D8003DADD1 /* MainViewController.swift in Sources */,
-				7ED3C4D91DDD898F00D58055 /* PickerViewAndDatePicker.swift in Sources */,
-				7EACD7DF1DDAE3AC003DADD1 /* ViewController.swift in Sources */,
-				7ED3C4DD1DDD89F100D58055 /* TableViewController.swift in Sources */,
-				7ED3C4DB1DDD89B800D58055 /* ScrollViewAndPageControl.swift in Sources */,
-				7ED3C4D71DDD895E00D58055 /* ImageViewController.swift in Sources */,
+				7E5CB4E31DE2DF1A00CA3353 /* ViewController.swift in Sources */,
+				7E5CB4E11DE2DF1A00CA3353 /* ScrollViewAndPageControl.swift in Sources */,
 				7EACD7DD1DDAE3AC003DADD1 /* AppDelegate.swift in Sources */,
-				7EE39DC31DDC35C8006CFAE8 /* WebViewController.swift in Sources */,
+				7ECD92881DEC216600501147 /* TableViewController.swift in Sources */,
+				7E3D944C1DED217000E0D9D3 /* Delegate_ByValueViewController.swift in Sources */,
+				7E5CB4E61DE2DF3C00CA3353 /* ImageViewController.swift in Sources */,
+				7ECD92861DEC214500501147 /* BlurEffectViewController.swift in Sources */,
+				7E3D944A1DED215800E0D9D3 /* Block_ByValueViewController.swift in Sources */,
+				7E5CB4E81DE2DF8D00CA3353 /* TimerViewController.swift in Sources */,
+				7E3D94501DED264C00E0D9D3 /* ByValueViewController.swift in Sources */,
+				7ECD92841DEC118800501147 /* ViewAnimationViewController.swift in Sources */,
+				7E5CB4E41DE2DF1A00CA3353 /* WebViewController.swift in Sources */,
+				7E5CB4E01DE2DF1A00CA3353 /* PickerViewAndDatePicker.swift in Sources */,
+				7E3D944E1DED21E700E0D9D3 /* ImageStretchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
