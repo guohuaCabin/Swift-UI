@@ -17,14 +17,25 @@ class TableViewController: UIViewController,UITableViewDataSource,UITableViewDel
     var blockVC         = Block_ByValueViewController()
     var delegateVC      = Delegate_ByValueViewController()
     var imageStretchVC  = ImageStretchViewController()
+    var userDefaultVC     = UserDefaultViewController()
+    var keyedArchiverVC   = KeyedArchiverViewController()
+    var drawVC          = DrawViewController()
+    var dateVC          = DateViewController()
+    var delayVC         = DelayViewController()
     
     
     
     
+    
+    //懒加载
     lazy var dataArray : [String] = {
         
-        return ["NSTimer","UIView简单动画","毛玻璃效果","Block传值和弱引用","delegate传值和弱引用","图片拉伸","NSUserDefault","归档NSKeyedArchiver","绘图","延迟的几种方法","NSDate","相册","LED灯","打印","UIPasteboard剪贴板","访问通讯录联系人"]
+        return ["NSTimer","UIView简单动画","毛玻璃效果","Block传值","delegate传值和弱引用","图片拉伸","NSUserDefault","归档NSKeyedArchiver","绘图","延迟的几种方法","NSDate","相册","LED灯","打印","UIPasteboard剪贴板","访问通讯录联系人"]
         
+    }()
+    
+    lazy var VCArray = {
+       return ["TimerViewController","ViewAnimationViewController","BlurEffectViewController","Block_ByValueViewController","Delegate_ByValueViewController","ImageStretchViewController","UserDefaultViewController","KeyedArchiverViewController","DrawViewController","DelayViewController","DateViewController","","","","",""]
     }()
     
     
@@ -75,7 +86,7 @@ class TableViewController: UIViewController,UITableViewDataSource,UITableViewDel
         cell?.accessoryType = .disclosureIndicator
         
         cell?.textLabel?.text = dataArray[indexPath.row]
-        
+        cell?.textLabel?.textColor = UIColor.brown
         return cell!
    
     }
@@ -87,53 +98,41 @@ class TableViewController: UIViewController,UITableViewDataSource,UITableViewDel
         let cell = tableView.cellForRow(at: indexPath)
         
         print("Clicked \(cell?.textLabel?.text)")
-//        return ["NSTimer","UIView简单动画","毛玻璃效果","Block传值","delegate传值","弱引用","图片拉伸","NSUserDefault","归档NSKeyedArchiver","绘图","延迟的几种方法","NSDate","相册","LED灯","打印","UIPasteboard剪贴板","访问通讯录联系人"]
+
         
-        
-        switch indexPath.row {
-        case 0:
-            self.navigationController?.pushViewController(timerVC, animated: true)
-            break
-        case 1:
-            self.navigationController?.pushViewController(self.viewAnimationVC, animated: true)
-            break
-        case 2:
-            self.navigationController?.pushViewController(self.blurEffectVC, animated: true)
-            break
-        case 3:
-            self.navigationController?.pushViewController(blockVC, animated: true)
-            break
-        case 4:
-            self.navigationController?.pushViewController(delegateVC, animated: true)
-            break
-        case 5:
-            self.navigationController?.pushViewController(imageStretchVC, animated: true)
-            break
-        case 6:
-            break
-        case 7:
-            break
-        case 8:
-            break
-        case 9:
-            break
-        case 10:
-            break
-        case 11:
-            break
-        case 12:
-            break
-        case 13:
-            break
-        case 14:
-            break
-        case 15:
-            break
-        default:
-            break
+/*
+        // 1.获取命名空间
+        // 通过字典的键来取值,如果键名不存在,那么取出来的值有可能就为没值.所以通过字典取出的值的类型为AnyObject?
+        guard let clsName = Bundle.main.infoDictionary!["CFBundleExecutable"] else {
+            print("命名空间不存在")
+            return
         }
+        // 2.通过命名空间和类名转换成类
+        let cls : AnyClass? = NSClassFromString((clsName as! String) + "." + VCArray[indexPath.row])
         
+        // swift 中通过Class创建一个对象,必须告诉系统Class的类型
+        guard let clsType = cls as? UIViewController.Type else {
+            print("无法转换成UIViewController")
+            return
+        }
+         
+         // 3.通过Class创建对象
+         let childController = clsType.init()
+  */
         
+        let clsName = Bundle.main.infoDictionary!["CFBundleExecutable"]
+        // 2.通过命名空间和类名转换成类
+        let cls : AnyClass? = NSClassFromString((clsName as! String) + "." + VCArray[indexPath.row])
+        
+        // swift 中通过Class创建一个对象,必须告诉系统Class的类型
+        let clsType = cls as! UIViewController.Type
+        // 3.通过Class创建对象
+        let childController = clsType.init()
+
+        childController.title = dataArray[indexPath.row]
+        
+        self.navigationController?.pushViewController(childController, animated: true)
+    
     }
     
     override func didReceiveMemoryWarning() {

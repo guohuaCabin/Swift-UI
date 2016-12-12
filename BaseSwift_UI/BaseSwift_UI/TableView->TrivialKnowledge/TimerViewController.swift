@@ -36,7 +36,7 @@ class TimerViewController: UIViewController {
         let titleArray = ["Start","Stop"]
         
         for i in 0...1 {
-           let button = UIButton(frame: CGRect(x: 20+130*i, y: 100, width: 100, height: 30))
+           let button = UIButton(frame: CGRect(x: 80+130*i, y: 200, width: 100, height: 30))
             
             button.setTitle(titleArray[i], for: .normal)
             button.setTitleColor(UIColor.brown, for: .normal)

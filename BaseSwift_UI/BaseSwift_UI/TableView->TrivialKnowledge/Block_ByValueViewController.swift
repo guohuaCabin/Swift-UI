@@ -8,9 +8,12 @@
 
 import UIKit
 
+
+
 class Block_ByValueViewController: UIViewController,UITextFieldDelegate {
 
     let viewWidth = UIScreen.main.bounds.size.width
+    var viewY = 100.0
     
     
     var textField :UITextField!
@@ -24,13 +27,34 @@ class Block_ByValueViewController: UIViewController,UITextFieldDelegate {
 
         self.view.backgroundColor = UIColor.white
         
-  
+        createLabel()
         createTextField()
         createBtton()
     }
+    //MARK: ************创建label************
+    func createLabel(){
+        
+        let label = UILabel(frame:CGRect(x: 10.0, y: viewY, width: Double(viewWidth-20.0), height: 80.0))
+        
+        label.text = "说明：\n 可以直接在输入框输入，点击按钮跳转，即正向传值，返回时即反向传值"
+//        label.textAlignment = .center
+        
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.textColor = UIColor.brown
+        label.layer.borderColor = UIColor.brown.cgColor
+        label.layer.borderWidth = 1
+        label.clipsToBounds = true
+        label.layer.cornerRadius = 5.0
+        
+        label.numberOfLines = 0
+        self.view.addSubview(label)
+        
+        viewY += 100.0
+    }
+    
     //MARK: **********创建textField***********
     func createTextField(){
-        self.textField = UITextField(frame: CGRect(x: 2, y: 150, width: viewWidth-4, height: 80))
+        self.textField = UITextField(frame: CGRect(x: 10.0, y: viewY, width: Double(viewWidth-20.0), height: 80.0))
         
         self.textField.delegate = self
         
@@ -43,7 +67,7 @@ class Block_ByValueViewController: UIViewController,UITextFieldDelegate {
         self.textField.layer.borderWidth = 2
         self.textField.layer.borderColor = UIColor.brown.cgColor
         
-        self.textField.placeholder = "please input words"
+        self.textField.placeholder = "点击按钮跳转，即正向传值，返回时即反向传值"
         
         self.textField.clearButtonMode = UITextFieldViewMode.whileEditing
         
@@ -54,16 +78,17 @@ class Block_ByValueViewController: UIViewController,UITextFieldDelegate {
         self.textField.returnKeyType = UIReturnKeyType.done
         
         self.textField.adjustsFontSizeToFitWidth = true
+        
         //设置最小可缩小字号
-        self.textField.minimumFontSize = 14;
+//        self.textField.minimumFontSize = 14;
         
-        self.textField.isSecureTextEntry = true
-        
-        
+//        self.textField.isSecureTextEntry = true
+  
         self.textField.tag = 100
         
-        
         self.view.addSubview(self.textField)
+        
+        viewY += 200.0
     }
     
     
@@ -71,7 +96,7 @@ class Block_ByValueViewController: UIViewController,UITextFieldDelegate {
     @discardableResult
     func createBtton() -> (UIButton) {
         
-        let button = UIButton(frame:CGRect(x:10,y:400,width:viewWidth-20,height:40))
+        let button = UIButton(frame:CGRect(x: 10.0, y: viewY, width: Double(viewWidth-20.0), height: 40.0))
         
         button.setTitle("跳转->ByValueVC", for: .normal)
         
@@ -95,6 +120,12 @@ class Block_ByValueViewController: UIViewController,UITextFieldDelegate {
     }
     //MARK: ******button点击事件*******
     func buttonClicked(sender:UIButton) -> () {
+        
+        byValueVC.initWithClosure { (sendVauleMessage:String?)->Void in
+            self.textField.text = sendVauleMessage
+        }
+        
+        byValueVC.sendValueAttributeMessage = self.textField.text
         
         self.navigationController?.pushViewController(byValueVC, animated: true)
         

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class Delegate_ByValueViewController: UIViewController,UITextFieldDelegate {
+class Delegate_ByValueViewController: UIViewController,UITextFieldDelegate,ByValueVCDelegate {//遵守delegate协议
 
     
     let viewWidth = UIScreen.main.bounds.size.width
-    
+     var viewY = 100
     
     var textField :UITextField!
     
@@ -22,15 +22,38 @@ class Delegate_ByValueViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
         
-        
+        createLabel()
         createTextField()
         
         createBtton()
     }
+    //MARK: ************创建label************
+    func createLabel(){
+        
+        let label = UILabel(frame:CGRect(x: 10, y: viewY, width: Int(viewWidth-20), height: 80))
+        
+        label.text = "说明：\n 可以直接在输入框输入，点击按钮跳转，即正向传值，返回时即反向传值"
+        //        label.textAlignment = .center
+        
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.textColor = UIColor.brown
+        label.layer.borderColor = UIColor.brown.cgColor
+        label.layer.borderWidth = 1
+        label.clipsToBounds = true
+        label.layer.cornerRadius = 5.0
+        
+        label.numberOfLines = 0
+        self.view.addSubview(label)
+        
+        viewY += 120
+    }
+    
+    
     //MARK: **********创建textField***********
     func createTextField(){
-        self.textField = UITextField(frame: CGRect(x: 2, y: 150, width: viewWidth-4, height: 80))
+        self.textField = UITextField(frame: CGRect(x: 2, y: viewY, width: Int(viewWidth-4), height: 150))
         
         self.textField.delegate = self
         
@@ -57,7 +80,7 @@ class Delegate_ByValueViewController: UIViewController,UITextFieldDelegate {
         //设置最小可缩小字号
         self.textField.minimumFontSize = 14;
         
-        self.textField.isSecureTextEntry = true
+//        self.textField.isSecureTextEntry = true
         
         
         self.textField.tag = 100
@@ -65,13 +88,15 @@ class Delegate_ByValueViewController: UIViewController,UITextFieldDelegate {
         
         self.view.addSubview(self.textField)
         
+        viewY += 280
+        
         
     }
     //MARK: **********创建button********
     @discardableResult
     func createBtton() -> (UIButton) {
         
-        let button = UIButton(frame:CGRect(x:10,y:400,width:viewWidth-20,height:40))
+        let button = UIButton(frame:CGRect(x:10,y:viewY,width:Int(viewWidth-20),height:40))
         
         button.setTitle("跳转->ByValueVC", for: .normal)
         
@@ -96,13 +121,23 @@ class Delegate_ByValueViewController: UIViewController,UITextFieldDelegate {
     //MARK: ******button点击事件*******
     func buttonClicked(sender:UIButton) -> () {
 
-        print("clicked button ......")
+        print("clicked  delegate button ^_^")
+        
+        //遵守协议 delegate
+        byValueVC.delegate = self
+        
+        byValueVC.sendValueAttributeMessage = self.textField.text
         
         self.navigationController?.pushViewController(byValueVC, animated: true)
  
     }
     
+    //MARK: ******** 实现代理方法 *************
+    func sendValueMessage(byValueViewController: ByValueViewController, message: String?) {
+        self.textField.text = message
+    }
     
+    //MARK: ******* textFieldDelegate *********
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
@@ -110,6 +145,7 @@ class Delegate_ByValueViewController: UIViewController,UITextFieldDelegate {
         return true
     }
     
+    //MARK: ******** 点击空白处收起键盘 *************
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         self.view.endEditing(true)

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E28B0021DFE739800D11CCA /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E28AFFD1DFE739800D11CCA /* DateViewController.swift */; };
+		1E28B0031DFE739800D11CCA /* DelayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E28AFFE1DFE739800D11CCA /* DelayViewController.swift */; };
+		1E28B0041DFE739800D11CCA /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E28AFFF1DFE739800D11CCA /* DrawViewController.swift */; };
+		1E28B0051DFE739800D11CCA /* KeyedArchiverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E28B0001DFE739800D11CCA /* KeyedArchiverViewController.swift */; };
+		1E28B0061DFE739800D11CCA /* UserDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E28B0011DFE739800D11CCA /* UserDefaultViewController.swift */; };
 		7E3D944A1DED215800E0D9D3 /* Block_ByValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3D94491DED215800E0D9D3 /* Block_ByValueViewController.swift */; };
 		7E3D944C1DED217000E0D9D3 /* Delegate_ByValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3D944B1DED217000E0D9D3 /* Delegate_ByValueViewController.swift */; };
 		7E3D944E1DED21E700E0D9D3 /* ImageStretchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3D944D1DED21E700E0D9D3 /* ImageStretchViewController.swift */; };
@@ -46,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E28AFFD1DFE739800D11CCA /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		1E28AFFE1DFE739800D11CCA /* DelayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayViewController.swift; sourceTree = "<group>"; };
+		1E28AFFF1DFE739800D11CCA /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		1E28B0001DFE739800D11CCA /* KeyedArchiverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyedArchiverViewController.swift; sourceTree = "<group>"; };
+		1E28B0011DFE739800D11CCA /* UserDefaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultViewController.swift; sourceTree = "<group>"; };
 		7E3D94491DED215800E0D9D3 /* Block_ByValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block_ByValueViewController.swift; sourceTree = "<group>"; };
 		7E3D944B1DED217000E0D9D3 /* Delegate_ByValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate_ByValueViewController.swift; sourceTree = "<group>"; };
 		7E3D944D1DED21E700E0D9D3 /* ImageStretchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStretchViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +123,11 @@
 		7E5CB4DF1DE2DF1A00CA3353 /* TableView->TrivialKnowledge */ = {
 			isa = PBXGroup;
 			children = (
+				1E28AFFD1DFE739800D11CCA /* DateViewController.swift */,
+				1E28AFFE1DFE739800D11CCA /* DelayViewController.swift */,
+				1E28AFFF1DFE739800D11CCA /* DrawViewController.swift */,
+				1E28B0001DFE739800D11CCA /* KeyedArchiverViewController.swift */,
+				1E28B0011DFE739800D11CCA /* UserDefaultViewController.swift */,
 				7ECD92871DEC216600501147 /* TableViewController.swift */,
 				7E5CB4E71DE2DF8D00CA3353 /* TimerViewController.swift */,
 				7ECD92831DEC118800501147 /* ViewAnimationViewController.swift */,
@@ -316,14 +331,19 @@
 			files = (
 				7E5CB4E31DE2DF1A00CA3353 /* ViewController.swift in Sources */,
 				7E5CB4E11DE2DF1A00CA3353 /* ScrollViewAndPageControl.swift in Sources */,
+				1E28B0031DFE739800D11CCA /* DelayViewController.swift in Sources */,
 				7EACD7DD1DDAE3AC003DADD1 /* AppDelegate.swift in Sources */,
+				1E28B0041DFE739800D11CCA /* DrawViewController.swift in Sources */,
 				7ECD92881DEC216600501147 /* TableViewController.swift in Sources */,
 				7E3D944C1DED217000E0D9D3 /* Delegate_ByValueViewController.swift in Sources */,
 				7E5CB4E61DE2DF3C00CA3353 /* ImageViewController.swift in Sources */,
 				7ECD92861DEC214500501147 /* BlurEffectViewController.swift in Sources */,
+				1E28B0061DFE739800D11CCA /* UserDefaultViewController.swift in Sources */,
+				1E28B0051DFE739800D11CCA /* KeyedArchiverViewController.swift in Sources */,
 				7E3D944A1DED215800E0D9D3 /* Block_ByValueViewController.swift in Sources */,
 				7E5CB4E81DE2DF8D00CA3353 /* TimerViewController.swift in Sources */,
 				7E3D94501DED264C00E0D9D3 /* ByValueViewController.swift in Sources */,
+				1E28B0021DFE739800D11CCA /* DateViewController.swift in Sources */,
 				7ECD92841DEC118800501147 /* ViewAnimationViewController.swift in Sources */,
 				7E5CB4E41DE2DF1A00CA3353 /* WebViewController.swift in Sources */,
 				7E5CB4E01DE2DF1A00CA3353 /* PickerViewAndDatePicker.swift in Sources */,
