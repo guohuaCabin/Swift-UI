@@ -12,6 +12,11 @@
 		1E28B0041DFE739800D11CCA /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E28AFFF1DFE739800D11CCA /* DrawViewController.swift */; };
 		1E28B0051DFE739800D11CCA /* KeyedArchiverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E28B0001DFE739800D11CCA /* KeyedArchiverViewController.swift */; };
 		1E28B0061DFE739800D11CCA /* UserDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E28B0011DFE739800D11CCA /* UserDefaultViewController.swift */; };
+		1E7FCE6C1DFE8220000BC2FB /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FCE6B1DFE8220000BC2FB /* PhotoAlbumViewController.swift */; };
+		1E7FCE6E1DFE823C000BC2FB /* LEDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FCE6D1DFE823C000BC2FB /* LEDViewController.swift */; };
+		1E7FCE701DFE82EF000BC2FB /* PrintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FCE6F1DFE82EF000BC2FB /* PrintViewController.swift */; };
+		1E7FCE721DFE8300000BC2FB /* PasteboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FCE711DFE8300000BC2FB /* PasteboardViewController.swift */; };
+		1E7FCE741DFE8310000BC2FB /* AddressBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7FCE731DFE8310000BC2FB /* AddressBookViewController.swift */; };
 		7E3D944A1DED215800E0D9D3 /* Block_ByValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3D94491DED215800E0D9D3 /* Block_ByValueViewController.swift */; };
 		7E3D944C1DED217000E0D9D3 /* Delegate_ByValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3D944B1DED217000E0D9D3 /* Delegate_ByValueViewController.swift */; };
 		7E3D944E1DED21E700E0D9D3 /* ImageStretchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3D944D1DED21E700E0D9D3 /* ImageStretchViewController.swift */; };
@@ -56,6 +61,11 @@
 		1E28AFFF1DFE739800D11CCA /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
 		1E28B0001DFE739800D11CCA /* KeyedArchiverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyedArchiverViewController.swift; sourceTree = "<group>"; };
 		1E28B0011DFE739800D11CCA /* UserDefaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultViewController.swift; sourceTree = "<group>"; };
+		1E7FCE6B1DFE8220000BC2FB /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
+		1E7FCE6D1DFE823C000BC2FB /* LEDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LEDViewController.swift; sourceTree = "<group>"; };
+		1E7FCE6F1DFE82EF000BC2FB /* PrintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintViewController.swift; sourceTree = "<group>"; };
+		1E7FCE711DFE8300000BC2FB /* PasteboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardViewController.swift; sourceTree = "<group>"; };
+		1E7FCE731DFE8310000BC2FB /* AddressBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookViewController.swift; sourceTree = "<group>"; };
 		7E3D94491DED215800E0D9D3 /* Block_ByValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block_ByValueViewController.swift; sourceTree = "<group>"; };
 		7E3D944B1DED217000E0D9D3 /* Delegate_ByValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate_ByValueViewController.swift; sourceTree = "<group>"; };
 		7E3D944D1DED21E700E0D9D3 /* ImageStretchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStretchViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +146,11 @@
 				7E3D944B1DED217000E0D9D3 /* Delegate_ByValueViewController.swift */,
 				7E3D944D1DED21E700E0D9D3 /* ImageStretchViewController.swift */,
 				7E3D944F1DED264C00E0D9D3 /* ByValueViewController.swift */,
+				1E7FCE6B1DFE8220000BC2FB /* PhotoAlbumViewController.swift */,
+				1E7FCE6D1DFE823C000BC2FB /* LEDViewController.swift */,
+				1E7FCE6F1DFE82EF000BC2FB /* PrintViewController.swift */,
+				1E7FCE711DFE8300000BC2FB /* PasteboardViewController.swift */,
+				1E7FCE731DFE8310000BC2FB /* AddressBookViewController.swift */,
 			);
 			path = "TableView->TrivialKnowledge";
 			sourceTree = "<group>";
@@ -332,17 +347,22 @@
 				7E5CB4E31DE2DF1A00CA3353 /* ViewController.swift in Sources */,
 				7E5CB4E11DE2DF1A00CA3353 /* ScrollViewAndPageControl.swift in Sources */,
 				1E28B0031DFE739800D11CCA /* DelayViewController.swift in Sources */,
+				1E7FCE6C1DFE8220000BC2FB /* PhotoAlbumViewController.swift in Sources */,
 				7EACD7DD1DDAE3AC003DADD1 /* AppDelegate.swift in Sources */,
 				1E28B0041DFE739800D11CCA /* DrawViewController.swift in Sources */,
 				7ECD92881DEC216600501147 /* TableViewController.swift in Sources */,
+				1E7FCE6E1DFE823C000BC2FB /* LEDViewController.swift in Sources */,
 				7E3D944C1DED217000E0D9D3 /* Delegate_ByValueViewController.swift in Sources */,
 				7E5CB4E61DE2DF3C00CA3353 /* ImageViewController.swift in Sources */,
+				1E7FCE721DFE8300000BC2FB /* PasteboardViewController.swift in Sources */,
+				1E7FCE701DFE82EF000BC2FB /* PrintViewController.swift in Sources */,
 				7ECD92861DEC214500501147 /* BlurEffectViewController.swift in Sources */,
 				1E28B0061DFE739800D11CCA /* UserDefaultViewController.swift in Sources */,
 				1E28B0051DFE739800D11CCA /* KeyedArchiverViewController.swift in Sources */,
 				7E3D944A1DED215800E0D9D3 /* Block_ByValueViewController.swift in Sources */,
 				7E5CB4E81DE2DF8D00CA3353 /* TimerViewController.swift in Sources */,
 				7E3D94501DED264C00E0D9D3 /* ByValueViewController.swift in Sources */,
+				1E7FCE741DFE8310000BC2FB /* AddressBookViewController.swift in Sources */,
 				1E28B0021DFE739800D11CCA /* DateViewController.swift in Sources */,
 				7ECD92841DEC118800501147 /* ViewAnimationViewController.swift in Sources */,
 				7E5CB4E41DE2DF1A00CA3353 /* WebViewController.swift in Sources */,

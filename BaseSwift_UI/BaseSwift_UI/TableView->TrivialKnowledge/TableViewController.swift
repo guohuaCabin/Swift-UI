@@ -35,7 +35,7 @@ class TableViewController: UIViewController,UITableViewDataSource,UITableViewDel
     }()
     
     lazy var VCArray = {
-       return ["TimerViewController","ViewAnimationViewController","BlurEffectViewController","Block_ByValueViewController","Delegate_ByValueViewController","ImageStretchViewController","UserDefaultViewController","KeyedArchiverViewController","DrawViewController","DelayViewController","DateViewController","","","","",""]
+       return ["TimerViewController","ViewAnimationViewController","BlurEffectViewController","Block_ByValueViewController","Delegate_ByValueViewController","ImageStretchViewController","UserDefaultViewController","KeyedArchiverViewController","DrawViewController","DelayViewController","DateViewController","PhotoAlbumViewController","LEDViewController","PrintViewController","PasteboardViewController","AddressBookViewController"]
     }()
     
     
@@ -43,7 +43,6 @@ class TableViewController: UIViewController,UITableViewDataSource,UITableViewDel
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.title = "TableViewController"
-       
         
         createTableView()
         
